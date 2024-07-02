@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector.h>
+#include <Tokenizer.h>
 
-int main() {
+int main(int argc, const char** argv) {
     Vector_t* names_vector = vector_init();
     //names_vector->data[0] = (char*)"World";
     vector_push_back(names_vector, (char*)"Hello");
@@ -16,5 +17,8 @@ int main() {
     fprintf(stdout, "%d\n", (int*)vector_at(names_vector, 2));
     vector_pop_back(names_vector);
     fprintf(stdout, "%d\n", (int*)vector_at(names_vector, 2));
+    TOKENIZER_TYPE type;
+    InitTokenizer(&type);
+    Tokenize(&type, argv);
     return EXIT_SUCCESS;
 }

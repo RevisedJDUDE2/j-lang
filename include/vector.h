@@ -1,6 +1,8 @@
 /*
         this is for c not for the language!
 */
+#ifndef VECTOR_H
+#define VECTOR_H
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -20,3 +22,4 @@ void vector_push_back(Vector_t* vector, void* element);
 void vector_pop_back(Vector_t* vector);
 void* vector_at(Vector_t* vector, int index);
 int vector_size(Vector_t* vector);
+#endif
