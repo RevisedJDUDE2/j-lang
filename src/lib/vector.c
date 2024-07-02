@@ -22,7 +22,7 @@ Vector_t* vector_init(void) {
 
 void vector_push_back(Vector_t* vector, void* element) {
     FILE* log_file = fopen(LOG_FILE, "w");
-    if(vector->size == 0) {
+    if(vector_size(vector) == 0) {
         fprintf(log_file, "Push an element at vector now size = %d, Location = %p", vector->size, &vector->data[vector->size]);
         vector->data[vector->size] = element;
         vector->size = 1;
@@ -36,4 +36,7 @@ void vector_push_back(Vector_t* vector, void* element) {
 
 void* vector_at(Vector_t* vector, int index) {
     return vector->data[index];
+}
+int vector_size(Vector_t* vector) {
+    return vector->size;
 }
