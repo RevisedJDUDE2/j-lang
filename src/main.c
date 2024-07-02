@@ -14,5 +14,7 @@ int main() {
     fprintf(stdout, "%s\n", (char*)vector_at(names_vector, 0));
     fprintf(stdout, "%s\n", (char*)vector_at(names_vector, 1));
     fprintf(stdout, "%d\n", (int*)vector_at(names_vector, 2));
+    vector_pop_back(names_vector);
+    fprintf(stdout, "%d\n", (int*)vector_at(names_vector, 2));
     return EXIT_SUCCESS;
 }
