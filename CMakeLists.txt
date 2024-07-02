@@ -17,3 +17,5 @@ add_executable(JLANG "src/main.c")
 
 set_target_properties(JLANG PROPERTIES OUTPUT_NAME "interpreter")
 target_include_directories(JLANG PUBLIC ./include)
+target_link_directories(JLANG PUBLIC ./build)
+target_link_libraries(JLANG PUBLIC runtime.dll)
