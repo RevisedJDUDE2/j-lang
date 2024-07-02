@@ -17,3 +17,4 @@ typedef struct Vector {
 
 Vector_t* vector_init(void);
 void vector_push_back(Vector_t* vector, void* element);
+void* vector_at(Vector_t* vector, int index);

@@ -33,3 +33,7 @@ void vector_push_back(Vector_t* vector, void* element) {
     }
     fclose(log_file);
 }
+
+void* vector_at(Vector_t* vector, int index) {
+    return vector->data[index];
+}
