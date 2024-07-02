@@ -4,7 +4,7 @@ Vector_t* vector_init(void) {
     FILE* fp = fopen(LOG_FILE, "w");
     Vector_t* temp = (Vector_t*)malloc(sizeof(Vector_t));
     temp->size = 0;
-    temp->data = (void**)malloc(maxsize * sizeof(void*));
+    temp->data = (void**)malloc(vector_maxsize * sizeof(void*));
     if(temp->data == NULL) {
         if(ENABLE_LOGS == 1) {
             fprintf(fp, "temp.data == NULL >> exiting now\n");
@@ -12,7 +12,7 @@ Vector_t* vector_init(void) {
         exit(EXIT_FAILURE);
     }
     fprintf(fp, "Starting Loop now\n");
-    for (int i = 0; i < maxsize; i++) {
+    for (int i = 0; i < vector_maxsize; i++) {
         fprintf(fp, "temp.data[%d] = NULL >> at location : %p\n", i, &temp->data[i]);
         temp->data[i] = NULL; // Initialize to NULL or some default value
     }

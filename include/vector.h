@@ -8,7 +8,7 @@
 
 static int ENABLE_LOGS = 1;
 
-static int maxsize = 100; //resize as needeed by the vector_resize()
+static int vector_maxsize = 100000; //resize as needeed by the vector_resize()
 
 typedef struct Vector {
     void** data;
